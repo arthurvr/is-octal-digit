@@ -1,0 +1,35 @@
+{
+  "name": "is-octal-digit",
+  "version": "0.0.0",
+  "description": "Check if a number or a string is a digit in the octal numeral system",
+  "license": "MIT",
+  "repository": "arthurvr/is-octal-digit",
+  "author": {
+    "name": "Arthur Verschaeve",
+    "email": "contact@arthurverschaeve.be",
+    "url": "arthurverschaeve.be"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "octal",
+    "oct",
+    "digit",
+    "number",
+    "integer",
+    "string",
+    "numeral",
+    "base-8",
+    "8"
+  ],
+  "devDependencies": {
+    "ava": "^0.0.4"
+  }
+}
