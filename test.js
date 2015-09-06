@@ -4,18 +4,17 @@ var isOctalDigit = require('./');
 
 test(function (t) {
 	[0, 1, 2, 3, 4, 5, 6, 7, '1'].forEach(function (digit) {
-		t.assert(isOctalDigit(digit));
+		t.true(isOctalDigit(digit));
 	});
 
-	t.assert(!isOctalDigit('01'));
-	t.assert(!isOctalDigit('10'));
-	t.assert(!isOctalDigit(8));
-	t.assert(!isOctalDigit('foo'));
+	t.false(isOctalDigit('01'));
+	t.false(isOctalDigit('10'));
+	t.false(isOctalDigit(8));
+	t.false(isOctalDigit('foo'));
 
-	try {
+	t.throws(function () {
 		isOctalDigit({});
-		t.assert(false);
-	} catch (error) {
-		t.assert(true);
-	}
+	});
+
+	t.end();
 });
