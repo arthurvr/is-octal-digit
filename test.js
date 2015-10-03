@@ -1,9 +1,8 @@
-'use strict';
-var test = require('ava');
-var isOctalDigit = require('./');
+import test from 'ava';
+import isOctalDigit from './';
 
-test(function (t) {
-	[0, 1, 2, 3, 4, 5, 6, 7, '1'].forEach(function (digit) {
+test(t => {
+	[0, 1, 2, 3, 4, 5, 6, 7, '1'].forEach(digit => {
 		t.true(isOctalDigit(digit));
 	});
 
@@ -12,7 +11,7 @@ test(function (t) {
 	t.false(isOctalDigit(8));
 	t.false(isOctalDigit('foo'));
 
-	t.throws(function () {
+	t.throws(() => {
 		isOctalDigit({});
 	});
 
