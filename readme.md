@@ -13,7 +13,7 @@ $ npm install --save is-octal-digit
 ## Usage
 
 ```js
-var isOctalDigit = require('is-octal-digit');
+const isOctalDigit = require('is-octal-digit');
 
 isOctalDigit(0);
 //=> true
